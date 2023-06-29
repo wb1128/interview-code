@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>拆解url的origin、文件名、hash</title>
+  </head>
+  <body>
+    <script>
+      const url = new URL("https://www.example.com/path/to/file.html#section1");
+      console.log(url);
+
+      console.log("Origin:", url.origin);
+      console.log("文件名（包括路径）:", url.pathname);
+      console.log("Hash:", url.hash);
+    </script>
+  </body>
+</html>

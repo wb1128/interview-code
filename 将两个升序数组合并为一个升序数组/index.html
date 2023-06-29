@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      // 给定两个数组 a 和 b ，它们的值为别为[1,3,5,7]和[2,4,6,8]，
+      // 请你用最简单的方法将 a 与 b 合并为一个数组，合并后得到的数组的值应为[1,2,3,4,5,6,7,8]
+
+      const a = [1, 3, 5, 7, 9];
+      const b = [2, 4, 6, 8];
+      // const a = [0, 2, 3, 5, 9, 10, 12];
+      // const b = [7, 11, 13];
+      // const a = [7, 11, 13];
+      // const b = [0, 2, 3, 5, 9, 10, 12];
+      // const a = [7, ];
+      // const b = [-1, -2];
+      const aLen = a.length;
+      const bLen = b.length;
+      let i = (j = 0);
+      const c = [];
+      while (i < aLen || j < bLen) {
+        if ((a[i] !== undefined && a[i] <= b[j]) || b[j] === undefined) {
+          c.push(a[i]);
+          i++;
+        } else {
+          c.push(b[j]);
+          j++;
+        }
+      }
+      console.log(c);
+    </script>
+  </body>
+</html>
